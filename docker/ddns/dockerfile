@@ -1,0 +1,12 @@
+FROM alpine:latest
+
+RUN apk --update add \
+    bash \
+    curl \
+    bind-tools \
+    && rm -rf /var/cache/apk/*
+
+COPY shell/ddns.sh /ddns/ddns.sh
+COPY shell/secret.sh /ddns/secret.sh
+
+RUN echo "*/3 * * * * /bin/bash /ddns/ddns.sh" >> /etc/crontabs/root
