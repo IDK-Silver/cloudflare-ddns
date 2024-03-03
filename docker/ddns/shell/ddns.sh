@@ -18,7 +18,8 @@ if [ "$CURRENT_IP" != "$DNS_IP" ]; then
             --data "{
         \"type\": \"A\",
         \"name\": \"${URLS[$i]}\",
-        \"content\": \"$CURRENT_IP\"
+        \"content\": \"$CURRENT_IP\",
+        \"proxied\": true
         }"
     done
 else
