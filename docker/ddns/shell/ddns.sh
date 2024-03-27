@@ -19,7 +19,7 @@ if [ "$CURRENT_IP" != "$DNS_IP" ]; then
         \"type\": \"A\",
         \"name\": \"${URLS[$i]}\",
         \"content\": \"$CURRENT_IP\",
-        \"proxied\": true
+        \"proxied\":${PROXIEDS[$i]}
         }"
     done
 else
