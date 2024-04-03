@@ -5,15 +5,15 @@ KEY='key'
 ZONE_ID='zone-id'
 
 RECORD_IDS=(
-      'id-for-one',
+      'id-for-one'
       'id-for-two'
 )
 URLS=(
-      'one.example.com',
+      'one.example.com'
       'two.example.com'
 )
 
 PROXIEDS=(
-      true,
+      true
       false
 )
